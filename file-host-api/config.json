@@ -1,0 +1,9 @@
+{
+  "photo_dir": "foto-pfad",
+  "qr_dir": "qr-pfad",
+  "token_hash": "sha256-hash-vom-token",
+
+  "host": "ip/domain",
+
+  "ssl": {"key": "ssl-cert-key", "cert": "ssl-cert"}
+}

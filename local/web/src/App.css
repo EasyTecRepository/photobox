@@ -1,0 +1,76 @@
+body {
+  background-color: #E9E3F2;
+  background-image: url("/public/img/background.png");
+  background-repeat: no-repeat;
+}
+.stream {
+  margin: 0px;
+  margin-top: 20px;
+}
+.center {
+  text-align: center;
+}
+.rounded {
+  border-radius: 15px;
+}
+.flex {
+  display: flex;
+}
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.button-foto {
+  color: #07050a;
+  background-color: #9BB96A;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.button-schließen {
+  color: #07050a;
+  background-color: #9BB96A;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  text-align: left;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.button-teilen {
+  cursor:pointer;
+  border:none;
+  background-color: transparent;
+}
+.button-teilen-img {
+  width:40px;
+  height:40px;
+  margin-right: 10px;
+}
+.text-default {
+  color: #07050a;
+}
+.infobox {
+  padding: 20px;
+  background-color: #e3dcef56;
+  margin-bottom: 17px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}

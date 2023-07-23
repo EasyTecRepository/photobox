@@ -1,0 +1,4 @@
+sanic
+sanic-Cors
+pillow
+qrcode
