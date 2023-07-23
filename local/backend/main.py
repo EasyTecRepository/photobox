@@ -41,7 +41,25 @@ async def foto_teilen(request: Request):
     if request.json.get("methode") == "email":
         response = requests.post(settings.FileHost.url, headers={"Authorization": settings.FileHost.key}, data=open(settings.fotos_path + "/" + request.json.get("id") + ".jpg", "rb").read())
 
-        
+        msg = MIMEMultipart('alternative')
+        msg.attach(MIMEText(f"""<!DOCTYPE html>
+<html>
+    <p>Hier ist die Fotobox.</p>
+    <p>Im Anhang finden Sie Ihr Bild, alternativ können Sie es über <a href="{response.json().get('url')}">diesen Link</a> herunterladen.</p>
+    <p>Schönen Tag.</p>
+</html>""", "html"))
+
+        with open(settings.fotos_path+"/"+request.json.get("id")+".jpg", 'rb') as image_file:
+            msg.attach(MIMEImage(image_file.read()))
+
+        msg["Subject"] = "Ihr Bild - Fotobox"
+        msg["From"] = settings.Mail.smtp_mail
+        msg["To"] = request.json.get("mail")
+
+        server = smtplib.SMTP_SSL(settings.Mail.smtp_server, settings.Mail.smtp_port)
+        server.login(settings.Mail.smtp_mail, settings.Mail.smtp_passwd)
+        server.send_message(msg)
+        server.quit()
 
         return empty()
 
