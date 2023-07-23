@@ -1,4 +1,6 @@
 # Projektübersicht - photobox
+![](https://img.shields.io/badge/Status-In_Entwicklung-orange)
+
 Willkommen. In dieser Repository geht es um eine Fotobox mit einer Website.
 Wir haben diese auf einem Raspberry Pi 3b+ gehostet, aber andere Modelle gehen hier sicherlich auch.
 Unsere Kamera ist hier eine GoPro HERO 4, welche ein WLAN-Netz eröffnet, indem sich der Raspberry Pi einloggen kann.
