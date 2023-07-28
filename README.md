@@ -12,7 +12,7 @@ Die alternative zum QR-Code ist die Sendung über eine E-Mail, hier wird das Fot
 
 ## Was wird benötigt?
 - Raspberry Pi (3b+)[^1]
-- GoPro (HERO 4[^1]
+- GoPro (HERO 4)[^1]
 [^1]: Andere Modelle wurden nicht getestet, können aber auch funktionieren
 
 ## Wie wird es installiert?
