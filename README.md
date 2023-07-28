@@ -22,12 +22,11 @@ Schaue dir doch dieses YouTube Video an, hier wird alles erklärt. :point_right:
 
 ### Online Webspace (Download-Server)
 WICHTIG: Der Download Server muss nach außen freigegeben sein! Zudem wird ein gültiges SSL-Zertifikat und bestenfalls eine Domain benötigt!
-1. Python3 installieren `sudo apt-get install python3 python3-pip unzip`
-2. Dateien für den File Host Server herunterladen & entpacken `wget https://github.com/EasyTecRepository/photobox/archive/refs/heads/main.zip && unzip main.zip`
-3. Ordner "file-host-api" öffnen `cd photobox-main/download-server`
+1. Abhängigkeiten installieren `sudo apt-get install python3 python3-pip git screen`
+2. Dateien für den File Host Server herunterladen`git clone https://github.com/EasyTecRepository/photobox.git`
+3. Ordner "file-host-api" öffnen `cd photobox/download-server`
 4. Abhängigkeiten installieren `pip3 install -r requirements.txt`
 5. Konfiguration anpassen `nano config.json`
-
 Variable | Beschreibung
 :------:|-------------
 photo_dir|Verzeichnis, in dem die Fotos 
@@ -36,10 +35,13 @@ token_hash|Das Kommunikationspasswort zwischen der Lokalen API Schnittstelle und
 host|IP oder Domain deines Servers
 ssl-> key|Pfad zum Key deines SSL-Zertifikates
 ssl-> cert|Pfad zum Zertifikat deines SSL-Zertifikates
+6. App starten `screen -dmS download-server python3 main.py`
 
 ### Website (Lokal auf Raspberry Pi)
-1. Dateien von GitHub herunterladen `git clone https://github.com/EasyTecRepository/photobox.git`
-2. 
+1. Abhängigkeiten installieren `sudo apt-get install python3 python3-pip git screen npm node`
+2. Dateien für lokale Schnittstelle herunterladen `git clone https://github.com/EasyTecRepository/photobox.git`
+3. Ordner "file-host-api" öffnen `cd photobox/local/backend`
+4. **Kommt noch ;)** ...
 
 
 ## Quellenangabe der verwendeten Icons
