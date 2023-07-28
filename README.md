@@ -21,12 +21,21 @@ Schaue dir doch dieses YouTube Video an, hier wird alles erklärt. :point_right:
 **[Erklärvideo auf YouTube](https://youtube.com/EasyTec100)**
 
 ### Online Webspace (Download-Server)
-WICHTIG: Der Download-Server muss nach außen freigegeben sein! Zudem wird ein gültiges SSL-Zertifikat und bestenfalls eine Domain benötigt!
+WICHTIG: Der Download Server muss nach außen freigegeben sein! Zudem wird ein gültiges SSL-Zertifikat und bestenfalls eine Domain benötigt!
 1. Python3 installieren `sudo apt-get install python3 python3-pip unzip`
 2. Dateien für den File Host Server herunterladen & entpacken `wget https://github.com/EasyTecRepository/photobox/archive/refs/heads/main.zip && unzip main.zip`
 3. Ordner "file-host-api" öffnen `cd photobox-main/download-server`
 4. Abhängigkeiten installieren `pip3 install -r requirements.txt`
 5. Konfiguration anpassen `nano config.json`
+
+Variable | Beschreibung
+:------:|-------------
+photo_dir|Verzeichnis, in dem die Fotos 
+qr_dir|Verzeichnis, in dem die QR-Codes gespeichert werden
+token_hash|Das Kommunikationspasswort zwischen der Lokalen API Schnittstelle und dem Download Server. Erstelle ein Passwort und Trage es [hier](https://coding.tools/sha256) ein. Das gehashte Passwort kannst du nun in die Konfiguration eintragen. Das ungehashte bitte für später bereithalten ;)
+host|IP oder Domain deines Servers
+ssl-> key|Pfad zum Key deines SSL-Zertifikates
+ssl-> cert|Pfad zum Zertifikat deines SSL-Zertifikates
 
 ### Website (Lokal auf Raspberry Pi)
 1. Dateien von GitHub herunterladen `git clone https://github.com/EasyTecRepository/photobox.git`
