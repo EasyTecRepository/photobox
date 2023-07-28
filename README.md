@@ -27,6 +27,7 @@ WICHTIG: Der Download Server muss nach außen freigegeben sein! Zudem wird ein g
 3. Ordner "file-host-api" öffnen `cd photobox/download-server`
 4. Abhängigkeiten installieren `pip3 install -r requirements.txt`
 5. Konfiguration anpassen `nano config.json`
+
 Variable | Beschreibung
 :------:|-------------
 photo_dir|Verzeichnis, in dem die Fotos 
@@ -35,6 +36,7 @@ token_hash|Das Kommunikationspasswort zwischen der Lokalen API Schnittstelle und
 host|IP oder Domain deines Servers
 ssl-> key|Pfad zum Key deines SSL-Zertifikates
 ssl-> cert|Pfad zum Zertifikat deines SSL-Zertifikates
+
 6. App starten `screen -dmS download-server python3 main.py`
 
 ### Website (Lokal auf Raspberry Pi)
