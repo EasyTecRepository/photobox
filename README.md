@@ -42,7 +42,7 @@ ssl-> cert|Pfad zum Zertifikat deines SSL-Zertifikates
 ### Website (Lokal auf Raspberry Pi)
 1. Abhängigkeiten installieren `sudo apt-get install python3 python3-pip git screen npm node`
 2. Dateien für lokale Schnittstelle herunterladen `git clone https://github.com/EasyTecRepository/photobox.git`
-3. Ordner "file-host-api" öffnen `cd photobox/local/backend`
+3. Ordner "backend" öffnen `cd photobox/local/backend`
 4. **Kommt noch ;)** ...
 
 
