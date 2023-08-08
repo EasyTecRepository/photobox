@@ -40,7 +40,7 @@ async def create_photo(rq: Request):
     img = Image.open(BytesIO(rq.body))
     img.save(f"{config.get('photo_dir')}/{code}", format="jpeg")
 
-    url = "http://127.0.0.1:8000/download?id=" + code
+    url = f"{'https' if config.get('ssl').get('enabled') else 'http'}://{config.get('host')}/download?id=" + code
 
     qr = QRCode(
         version=1,
@@ -142,4 +142,4 @@ async def get_downlaod_page(rq: Request):
 
 
 if "__main__" == __name__:
-    app.run(host=config.get("host"), port=443, ssl=config.get('ssl'))
+    app.run(host=config.get("host"), port=443 if config.get("ssl").get("enabled") else 80, ssl=config.get('ssl') if config.get("ssl").get("enabled") else None)

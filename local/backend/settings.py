@@ -6,7 +6,7 @@ class FileHost:
 
 # Mail settings
 class Mail:
-    smtp_port = 0
     smtp_server = ""
+    smtp_port = 0
     smtp_mail = ""
     smtp_passwd = ""

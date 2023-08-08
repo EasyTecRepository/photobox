@@ -5,5 +5,9 @@
 
   "host": "ip/domain",
 
-  "ssl": {"key": "ssl-cert-key", "cert": "ssl-cert"}
+  "ssl": {
+    "enabled": true,
+    "key": "ssl-cert-key",
+    "cert": "ssl-cert"
+  }
 }

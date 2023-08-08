@@ -66,4 +66,4 @@ async def foto_teilen(request: Request):
 app.static("/fotos/", settings.fotos_path, name="fotos")
 
 if __name__ == "__main__":
-    app.run(port=8001)
+    app.run(port=8000)
