@@ -76,7 +76,7 @@ api_endpoint|Url für das Lokale API|http://{Lokale IP deines Raspberry PIs}:800
 5. Website ins Webserver-Verzeichnis verschieben und Zugriffsrechte anpassen `mkdir /var/www/html/photobox && cp -R build/ /var/www/html/photobox && chown -R www-data:www-data /var/www/html/photobox/`
 6. Webserver starten `sudo systemctl start apache2`
 
-**Glückwunsch! Deine Photobox ist nun unter `http://{Lokale IP deines Raspberry PIs}/photobox/` erreichbar**
+**Glückwunsch! Deine Photobox ist nun unter `http://{Lokale IP deines Raspberry PIs}/photobox/` erreichbar.**
 
 ## Quellenangabe der verwendeten Icons
 
