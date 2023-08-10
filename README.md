@@ -24,10 +24,10 @@ Schaue dir doch dieses YouTube Video an, hier wird alles erklärt. :point_right:
 WICHTIG: Der Download Server muss nach außen freigegeben sein! Zudem sollte eine gültige Domain vorhanden sein.
 1. Abhängigkeiten installieren `sudo apt-get install python3 python3-pip git screen`
 2. Dateien für den File Host Server herunterladen `git clone https://github.com/EasyTecRepository/photobox.git`
-3. Ordner "file-host-api" öffnen `cd photobox/download-server`
+3. Ordner "download-server" öffnen `cd photobox/download-server`
 4. Abhängigkeiten installieren `pip3 install -r requirements.txt`
 5. Konfiguration anpassen `nano config.json`
-6. SSL-Zertifikat generieren `certbot certonly -m deine@email.com -d deine.domain.com`<br>Alternativ kann das SSL-Zertifikat weggelassen werden. Dazu einfach in der `config.json` `ssl-> enabled` auf `false` setzen. **Wird nicht empfohlen und birgt ein Sicherheitsrisiko!**
+6. SSL-Zertifikat generieren `certbot certonly -m deine@email.com -d deine.domain.tld`<br>Alternativ kann das SSL-Zertifikat weggelassen werden. Dazu einfach in der `config.json` `ssl-> enabled` auf `false` setzen. **Wird nicht empfohlen und birgt ein Sicherheitsrisiko!**
 
 
 Variable | Beschreibung | Typ
