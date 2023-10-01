@@ -35,6 +35,7 @@ Variable | Beschreibung | Typ
 :------:|-------------|:-----:
 photo_dir|Verzeichnis, in dem die Fotos gespeichert werden|Pfad[string]
 qr_dir|Verzeichnis, in dem die QR-Codes gespeichert werden|Pfad[string]
+port|Port für den Download-Server|Port[intiger]
 token_hash|Das Kommunikationspasswort zwischen der Lokalen API Schnittstelle und dem Download Server. Erstelle ein Passwort und Trage es [hier](https://coding.tools/sha256) ein. Das gehashte Passwort kannst du nun in die Konfiguration eintragen. Das ungehashte bitte für später bereithalten ;)|sha256 Hash[string]
 host|IP oder Domain deines Servers|Domain/IP[string]
 ssl-> enabled|Schaltet das Bentuzen des SSL-Zertifikates ein und aus.|true/false[boolean]

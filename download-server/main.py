@@ -142,4 +142,4 @@ async def get_downlaod_page(rq: Request):
 
 
 if "__main__" == __name__:
-    app.run(host=config.get("host"), port=443 if config.get("ssl").get("enabled") else 80, ssl=config.get('ssl') if config.get("ssl").get("enabled") else None)
+    app.run(host=config.get("host"), port=config.get("port") if config.get("ssl").get("enabled") else 80, ssl=config.get('ssl') if config.get("ssl").get("enabled") else None)
