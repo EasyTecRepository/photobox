@@ -54,6 +54,7 @@ ssl-> cert|Pfad zum Zertifikat deines SSL-Zertifikates|Pfad[string]
 Variable | Beschreibung | Typ
 :------:|-------------|:-----:
 photos_path|Verzeichnis, in dem die Fotos gespeichert werden|Pfad[string]
+api_port|Port auf dem das Lokale API erreichbar ist|Port[intiger]
 FileHost-> url|URL zum bereits konfiguriertem Download-Server|http(s)://Host:Port[string]
 FileHost-> key|Ungehashtes Kommunikationspasswort, das vorhin vergeben wurde|Passwort[string]
 Mail-> smtp_server|Serveradresse zum SMTP-Server deines Anbieters|Host[string]
@@ -71,7 +72,7 @@ Mail-> smtp_passwd|Passwort des Mail Accounts|Passwort[string]
 
 Variable | Beschreibung | Typ
 :------:|-------------|:-----:
-api_endpoint|Url für das Lokale API|http://{Lokale IP deines Raspberry PIs}:8000[string]
+api_endpoint|Url für das Lokale API|http://{Lokale IP deines Raspberry PIs}:{Port der in der settings.py vergeben wurde}[string]
 
 4. Website kompilieren `npm run build`
 5. Website ins Webserver-Verzeichnis verschieben und Zugriffsrechte anpassen `mkdir /var/www/html/photobox && cp -R build/ /var/www/html/photobox && chown -R www-data:www-data /var/www/html/photobox/`

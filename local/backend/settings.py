@@ -1,4 +1,5 @@
 fotos_path = "pfad-zum-foto-verzeichnis"
+api_port = 8000
 
 class FileHost:
     url = "filehost-url"
