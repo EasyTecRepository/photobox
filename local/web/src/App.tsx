@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState } from "react";
 import axios from 'axios';
-import config from 'config.json';
+import config from './config.json';
 import Modal from 'react-modal';
 
 const ModalStyle = {
