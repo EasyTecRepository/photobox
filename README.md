@@ -11,6 +11,10 @@ Die alternative zum QR-Code ist die Sendung über eine E-Mail, hier wird das Fot
 
 :handshake:	Eine Zusammenarbeit zwischen [@JonnyTutorials](https://github.com/jonnytutorials) und [@EasyTecRepository](https://github.com/easytecrepository)
 
+> [!WARNING]
+> Beachte: Alle Fotos die über die Weboberfläche übertragen werden sind im Netzwerk unverschlüsselt!
+> Unbefugte könnten diese Fotos im Netzwerk leicht abfangen.
+
 ## Was wird benötigt?
 - Raspberry Pi (3b+)[^1]
 - GoPro (HERO 4)[^1]
