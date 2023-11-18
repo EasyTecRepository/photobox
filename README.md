@@ -67,7 +67,7 @@ Mail-> smtp_passwd|Passwort des Mail Accounts|Passwort[string]
 7. Verzeichnis verlassen `cd ..`
 
 ### Website (Lokal auf Raspberry Pi)
-1. Ordner "web" öffnen `cd photobox/local/backend`
+1. Ordner "web" öffnen `cd photobox/local/web`
 2. Module installieren `npm i`
 3. Konfiguration anpassen `nano src/config.json`
 
