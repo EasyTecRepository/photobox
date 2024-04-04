@@ -1,6 +1,6 @@
 # Projektübersicht - photobox
-![](https://img.shields.io/badge/Status-Abgeschlossen-green)
-![](https://img.shields.io/badge/Test-Ausstehend-orange)
+![](https://img.shields.io/badge/Status-Abgeschlossen-green+)
+![](https://img.shields.io/badge/Test-Ausgeführt%3B%20Verbesserungen%20ausstehend-green+?logo=openbugbounty&logoColor=ffffff)
 
 Willkommen. In dieser Repository geht es um eine Fotobox mit einer Website.
 Wir haben diese auf einem Raspberry Pi 3b+ gehostet, aber andere Modelle gehen hier sicherlich auch.
