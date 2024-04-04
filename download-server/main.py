@@ -53,7 +53,8 @@ async def create_photo(rq: Request):
 
     qr.make_image(fill_color="black", back_color="white").save(f"{config.get('qr_dir')}/{code}.png")
 
-    return await file(location=f"{config.get('qr_dir')}/{code}.png")
+    with open(f"{config.get('qr_dir')}/{code}.png", "rb") as image_file:
+        return json({"url": f"data:image/jpeg;base64,{base64.b64encode(image_file.read()).decode()}"})
 
 
 @app.get(uri="/foto")
