@@ -28,13 +28,13 @@ async def foto_erstellen(request: Request):
     print(gopro.getMedia())
     bild = requests.get(gopro.getMedia())
     Image.open(BytesIO(bild.content)).save(settings.fotos_path+"/"+name+".jpg", format="jpeg")
-    return json({"id": "0"})
+    return json({"id": name})
 
 
 @app.post(uri="/teilen")
 async def foto_teilen(request: Request):
     if request.json.get("methode") == "qr":
-        response = requests.post(settings.FileHost.url, headers={"Authorization": settings.FileHost.key}, data=open(settings.fotos_path+"/"+request.json.get("id")+".jpg", "rb").read())
+        response = requests.post(settings.FileHost.url+"/create", headers={"Authorization": settings.FileHost.key}, data=open(settings.fotos_path+"/"+request.json.get("id")+".jpg", "rb").read())
         print(response.json())
         return json({"url": response.json().get("qr-url")})
 
