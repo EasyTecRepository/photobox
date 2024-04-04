@@ -15,9 +15,14 @@ Die alternative zum QR-Code ist die Sendung über eine E-Mail, hier wird das Fot
 > Beachte: Alle Fotos die über die Weboberfläche übertragen werden sind im Netzwerk unverschlüsselt!
 > Unbefugte könnten diese Fotos im Netzwerk leicht abfangen.
 
-## Was wird benötigt?
-- Raspberry Pi (3b+)[^1]
+> [!NOTE]
+> Beachte: Die WLAN-Karte des Pi's wird benötigt um sich mit der GoPro zu verbinden.
+> Zudem wird eine LAN-Verbindung benötigt, um die Oberfläche bereitzustellen.
+
+## Was wird an Hardware benötigt?
+- Raspberry Pi (3b+)[^1] (mit WLAN-Modul)
 - GoPro (HERO 4)[^1]
+- Bildschirm o.ä. zum anzeigen der Website
 [^1]: Andere Modelle wurden nicht getestet, können aber auch funktionieren
 
 ## Wie wird es installiert?
@@ -42,6 +47,7 @@ qr_dir|Verzeichnis, in dem die QR-Codes gespeichert werden|Pfad[string]
 port|Port für den Download-Server|Port[intiger]
 token_hash|Das Kommunikationspasswort zwischen der Lokalen API Schnittstelle und dem Download Server. Erstelle ein Passwort und Trage es [hier](https://coding.tools/sha256) ein. Das gehashte Passwort kannst du nun in die Konfiguration eintragen. Das ungehashte bitte für später bereithalten ;)|sha256 Hash[string]
 host|IP oder Domain deines Servers|Domain/IP[string]
+public_url|Öffentliche URL deines Servers|http(s)://Domain/IP[string]
 ssl-> enabled|Schaltet das Bentuzen des SSL-Zertifikates ein und aus.|true/false[boolean]
 ssl-> key|Pfad zum Key deines SSL-Zertifikates|Pfad[string]
 ssl-> cert|Pfad zum Zertifikat deines SSL-Zertifikates|Pfad[string]
