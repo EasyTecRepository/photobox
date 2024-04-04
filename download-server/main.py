@@ -28,7 +28,7 @@ async def create_photo(rq: Request):
         raise BadRequest()
 
     if not rq.headers.get("Authorization") or sha256(
-            rq.headers.get("Authorization").encode("UTF-8")).hexdigest() != config.get("token_hash"):
+            rq.headers.get("Authorization").encode()).hexdigest().upper() != config.get("token_hash").upper():
         raise Unauthorized()
 
     while True:
@@ -40,7 +40,7 @@ async def create_photo(rq: Request):
     img = Image.open(BytesIO(rq.body))
     img.save(f"{config.get('photo_dir')}/{code}", format="jpeg")
 
-    url = f"{'https' if config.get('ssl').get('enabled') else 'http'}://{config.get('host')}/download?id=" + code
+    url = f"{config.get('public_url')}/download?id=" + code
 
     qr = QRCode(
         version=1,
