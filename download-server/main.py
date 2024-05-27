@@ -2,7 +2,7 @@ import random
 import string
 from json import loads
 from sanic import Sanic, Request
-from sanic.response import file, html
+from sanic.response import file, html, json
 from sanic.exceptions import BadRequest, Unauthorized
 from sanic_cors import CORS
 from hashlib import sha256
@@ -143,4 +143,8 @@ async def get_downlaod_page(rq: Request):
 
 
 if "__main__" == __name__:
-    app.run(host=config.get("host"), port=config.get("port") if config.get("ssl").get("enabled") else 80, ssl=config.get('ssl') if config.get("ssl").get("enabled") else None)
+    app.run(
+        host=config.get("host"),
+        port=config.get("port") if config.get("ssl").get("enabled") else config.get("port"),
+        ssl=config.get('ssl') if config.get("ssl").get("enabled") else None
+        )
