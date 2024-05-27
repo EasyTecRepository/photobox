@@ -10,6 +10,7 @@ from os import listdir
 from PIL import Image
 from io import BytesIO
 from qrcode import QRCode, constants
+import base64
 
 
 def load_config():
