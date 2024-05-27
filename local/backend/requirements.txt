@@ -2,3 +2,4 @@ sanic
 sanic-Cors
 goprocam
 pillow
+requests
