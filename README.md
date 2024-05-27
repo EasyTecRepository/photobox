@@ -19,6 +19,8 @@ Die alternative zum QR-Code ist die Sendung über eine E-Mail, hier wird das Fot
 > Beachte: Die WLAN-Karte des Pi's wird benötigt um sich mit der GoPro zu verbinden.
 > Zudem wird eine LAN-Verbindung benötigt, um die Oberfläche bereitzustellen.
 
+![](preview.jpg)
+
 ## Was wird an Hardware benötigt?
 - Raspberry Pi (3b+)[^1] (mit WLAN-Modul)
 - GoPro (HERO 4)[^1]
