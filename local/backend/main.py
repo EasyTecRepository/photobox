@@ -36,7 +36,7 @@ async def foto_teilen(request: Request):
     if request.json.get("methode") == "qr":
         response = requests.post(settings.FileHost.url+"/create", headers={"Authorization": settings.FileHost.key}, data=open(settings.fotos_path+"/"+request.json.get("id")+".jpg", "rb").read())
         print(response.json())
-        return json({"url": response.json().get("qr-url")})
+        return json({"url": response.json().get("url")})
 
     if request.json.get("methode") == "email":
         response = requests.post(settings.FileHost.url, headers={"Authorization": settings.FileHost.key}, data=open(settings.fotos_path + "/" + request.json.get("id") + ".jpg", "rb").read())
