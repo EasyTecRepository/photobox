@@ -61,6 +61,7 @@ ssl-> cert|Pfad zum Zertifikat deines SSL-Zertifikates|Pfad[string]
 3. Ordner "backend" öffnen `cd photobox/local/backend`
 4. Abhängigkeiten installieren `pip3 install -r requirements.txt`
 5. Konfiguration anpassen `nano settings.py`
+6. [Netzwerkeinstellungen treffen](connect_wifi.md)
 
 Variable | Beschreibung | Typ
 :------:|-------------|:-----:
@@ -73,8 +74,8 @@ Mail-> smtp_port|Port zum SMTP-Server deines Anbieters|Port[intiger]
 Mail-> smtp_mail|E-Mail Adresse deines Mail Accounts|E-Mail-Adresse[string]
 Mail-> smtp_passwd|Passwort des Mail Accounts|Passwort[string]
 
-6. App starten `screen -dmS backend python3 main.py`
-7. Verzeichnis verlassen `cd ..`
+7. App starten `screen -dmS backend python3 main.py`
+8. Verzeichnis verlassen `cd ..`
 
 ### Website (Lokal auf Raspberry Pi)
 1. Ordner "web" öffnen `cd photobox/local/web`
