@@ -92,15 +92,15 @@ async def get_downlaod_page(rq: Request):
     var id = getQueryVariable("id");
     console.log(id);
     var image = document.getElementById("preview");
-    image.src = `http://127.0.0.1:8000/foto?id=${id}`;
+    image.src = `{url}/foto?id=`+id;
 
-    function download() {
-      axios({
-        url: `http://127.0.0.1:8000/foto?id=${id}`,
+    function download() {{
+      axios({{
+        url: `{url}/foto?id=`+id,
         method: 'GET',
         responseType: 'blob'
-      })
-        .then((response) => {
+      }})
+        .then((response) => {{
           const url = window.URL
             .createObjectURL(new Blob([response.data]));
           const link = document.createElement('a');
@@ -109,37 +109,36 @@ async def get_downlaod_page(rq: Request):
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
-        })
-    }
-    function getQueryVariable(variable) {
+        }})
+    }}
+    function getQueryVariable(variable) {{
       var query = window.location.search.substring(1);
       var vars = query.split("&");
-      for (var i = 0; i < vars.length; i++) {
+      for (var i = 0; i < vars.length; i++) {{
         var pair = vars[i].split("=");
-        if (pair[0] == variable) {
+        if (pair[0] == variable) {{
           return pair[1];
-        }
-      }
+        }}
+      }}
       return null;
-    }
+    }}
   </script>
   <style>
-    body {
+    body {{
       background-color: darkgrey;
       text-align: center;
-    }
-
-    img {
+    }}
+    img {{
       border-radius: 15px;
-    }
-    button {
+    }}
+    button {{
       font-size: 40px;
       font-family: Arial, Helvetica, sans-serif;
-    }
+    }}
   </style>
 </body>
 </html>
-    """
+    """.format(url=config.get("public_url"))
     return html(html_site)
 
 
